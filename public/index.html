@@ -1,9 +1,268 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Checkerton 2000</title>
-</head>
-<body>
+  <style type="text/css">
+  .center {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+  }
 
+  .square {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    z-index: 0;
+  }
+
+  .positive {
+    background-color: lightgrey;
+  }
+
+  .negative {
+    background-color: grey;
+  }
+
+  .circle {
+    position: all;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    z-index: 100;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .black {
+    background-color: black;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="currentPlayer center"> black </div>
+  <div class="board center">
+    <table>
+      <tr>
+        <td>
+          <div class="square positive">
+            <div class="circle red"></div>
+          </div>
+        </td>
+        <td>
+          <div class="square negative">
+            <div class="circle black"></div>
+          </div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative "></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+        <td>
+          <div class="square negative"></div>
+        </td>
+        <td>
+          <div class="square positive"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
 </body>
+
 </html>
